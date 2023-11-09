@@ -1,0 +1,7 @@
+kind create cluster --config ha-config.yaml \
+ --image=kindest/node:v1.22.0 --name=m3w3
+
+# 示例代码
+# 部署示例Nginx应用程序
+kubectl create deployment nginx-deployment --image=nginx
+kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer
